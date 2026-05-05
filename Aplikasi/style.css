@@ -446,6 +446,46 @@
             bottom: 30px;
         }
 
+footer {
+    text-align: center;
+}
+
+
+.anggota-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Membagi layar menjadi 2 kolom sama besar */
+    gap: 20px 40px; /* Jarak antar anggota (20px atas-bawah, 40px kiri-kanan) */
+    max-width: 600px; /* Lebar maksimal area nama */
+    margin: 20px auto 0 auto; /* Supaya posisinya di tengah layar */
+}
+
+/* Mengatur agar NIM selalu turun ke bawah nama */
+.anggota-item {
+    display: flex;
+    flex-direction: column; 
+}
+
+/* Anggota di kolom KIRI (Urutan 1 dan 3) */
+.anggota-item:nth-child(odd) {
+    text-align: left;
+}
+
+/* Anggota di kolom KANAN (Urutan 2 dan 4) */
+.anggota-item:nth-child(even) {
+    text-align: right;
+}
+
+/* Styling Teks */
+.nama {
+    font-size: 16px;
+    margin-bottom: 4px; /* Jarak antara nama dan NIM */
+}
+
+.nim {
+    font-size: 14px;
+    color: #cbd5e1; /* Warna NIM sedikit lebih redup */
+}
+
         /* --- Responsif HP --- */
        @media (max-width: 768px) {
 
